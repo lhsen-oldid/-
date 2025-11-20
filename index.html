@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>صديقي العجيب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              tofoli: {
+                bg: '#F2F6F9',       // Cool white/grey background
+                cream: '#FDFBF7',
+                lavender: '#E2DDFE', // Soft Lavender
+                lavenderDark: '#8B80F9',
+                mint: '#D0F0E4',     // Soft Mint
+                mintDark: '#45B08C',
+                blue: '#D6E6FF',     // Soft Blue
+                blueDark: '#5B95F5',
+                text: '#475569',     // Slate 600
+                textLight: '#94A3B8' // Slate 400
+              }
+            },
+            boxShadow: {
+              'clay': '8px 8px 16px #CAD4E0, -8px -8px 16px #FFFFFF',
+              'clay-sm': '4px 4px 8px #CAD4E0, -4px -4px 8px #FFFFFF',
+              'clay-inset': 'inset 4px 4px 8px #D1D9E6, inset -4px -4px 8px #FFFFFF',
+              'float': '0 20px 40px -5px rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(0, 0, 0, 0.02)',
+              'glow-soft': '0 0 20px rgba(139, 128, 249, 0.3)',
+            },
+            animation: {
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-delayed': 'float 8s ease-in-out infinite 4s',
+              'pulse-soft': 'pulse-scale 3s ease-in-out infinite',
+              'music-bar': 'music-bar 0.6s ease-in-out infinite alternate',
+              'morph': 'morph 10s ease-in-out infinite alternate',
+              'spin-slow': 'spin 12s linear infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              },
+              'pulse-scale': {
+                 '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+                 '50%': { transform: 'scale(1.05)', opacity: '0.9' },
+              },
+              'music-bar': {
+                '0%': { height: '20%' },
+                '100%': { height: '100%' },
+              },
+              morph: {
+                '0%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+                '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
+                '100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' }
+              },
+              shimmer: {
+                'from': { transform: 'translateX(-100%)' },
+                'to': { transform: 'translateX(100%)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-tofoli-bg h-full overflow-hidden touch-none select-none text-tofoli-text">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>

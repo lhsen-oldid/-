@@ -1,0 +1,7 @@
+{
+  "name": "المساعد الصوتي الذكي",
+  "description": "AI Voice Assistant that speaks with you naturally.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
